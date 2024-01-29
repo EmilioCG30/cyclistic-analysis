@@ -23,3 +23,9 @@ Until now, Cyclistic's marketing strategy was based on building a general brand 
 Cyclistic financial analysts came to the conclusion that annual members are much more profitable than occasional cyclists. Although price flexibility helps Cyclistic attract more customers, Moreno believes that maximizing the number of annual members will be key to future growth. Instead of creating a marketing campaign that aims at all new customers, Moreno believes that there are many possibilities to turn casual cyclists into members. She points out that casual cyclists already know the Cyclistic program and have chosen Cyclistic for their mobility needs.
 
 Moreno set a clear goal: Design marketing strategies aimed at turning occasional cyclists into annual members. However, to do that, the team of marketing analysts needs to better understand how annual members and occasional cyclists differ, why casual cyclists would buy a membership and how digital media could affect their marketing tactics. Moreno and his team are interested in analyzing Cyclistic's historical bicycle travel data to identify trends.
+
+## Data
+
+All trip data can be found on <https://divvy-tripdata.s3.amazonaws.com/index.html>.
+
+Data has been provided by **Motivate International Inc** under this license <https://www.divvybikes.com/data-license-agreement>
