@@ -38,15 +38,35 @@ Data has been provided by **Motivate International Inc** under this license <htt
 
 ## Analyze the data
 
+You can view the entire dashboard here <https://popsql.com/dashboards/R1U5GmL6/cyclistic?access_token=38d1bdf4080079808bd6fb5e16f3d279>
+
+### 2023 as a Year
+
 There was a total of **5'719,877 rides** on 2023, where 64% of them were made by members, leaving only a 36% of casual users.
 
 ![image](https://github.com/EmilioCG30/cyclistic-analysis/assets/111447739/52b51ee6-0bf8-4627-b0f2-73f5a237031e)
 
 The average ride duration was of 18min throughout the year 2023.
 
+### 2023 in Months
+
+June, July and August are the months with more rides, which is consistent with vacations and a better overall climate. The mean ride duration per month is consistent with this assumption.
+
+![image](https://github.com/EmilioCG30/cyclistic-analysis/assets/111447739/827af81c-41c4-4186-92ae-347cf977e1f6)
+
+![image](https://github.com/EmilioCG30/cyclistic-analysis/assets/111447739/95e323c7-8fb2-4e74-87fe-ad82b08aa1d9)
+
+### 2023 Each Day
+
+Thursday through Saturday are the most active days of the week throughout the year.
+
+![image](https://github.com/EmilioCG30/cyclistic-analysis/assets/111447739/74c6a0e0-1b29-4783-96c7-10034bdb2c99)
+
+However, the ride duration is higher on weekends (Saturday and Sunday), averaging 4 minutes more.
+
+![image](https://github.com/EmilioCG30/cyclistic-analysis/assets/111447739/290e6a1a-0f64-4659-9388-4734624fa40c)
+
+
 ## Sharing the Analysis
 ### Creating Data Viz
 
-
-
-You can view the entire dashboard here <https://popsql.com/dashboards/R1U5GmL6/cyclistic?access_token=38d1bdf4080079808bd6fb5e16f3d279>
