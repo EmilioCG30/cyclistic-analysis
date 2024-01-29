@@ -1,0 +1,148 @@
+-- Obtain the total rides per month per membership type and mean ride length (duration)
+WITH MonthlyRideCounts AS (
+    SELECT
+        EXTRACT(MONTH FROM started_at) AS month,
+        member_casual,
+        COUNT(ride_id) AS total_rides,
+        AVG(TIMESTAMP_DIFF(ended_at, started_at, minute)) AS avg_ride_length_min
+    FROM 
+        trip_data.jan_23
+    GROUP BY
+        month, member_casual
+
+    UNION ALL
+
+    SELECT
+        EXTRACT(MONTH FROM started_at) AS month,
+        member_casual,
+        COUNT(ride_id) AS total_rides,
+        AVG(TIMESTAMP_DIFF(ended_at, started_at, minute)) AS avg_ride_length_min
+    FROM 
+        trip_data.feb_23
+    GROUP BY
+        month, member_casual
+
+    -- Repeat the UNION ALL clauses for each month table (mar_23, apr_23, etc.)
+    -- Example for March:
+    UNION ALL
+    SELECT
+        EXTRACT(MONTH FROM started_at) AS month,
+        member_casual,
+        COUNT(ride_id) AS total_rides,
+        AVG(TIMESTAMP_DIFF(ended_at, started_at, minute)) AS avg_ride_length_min
+    FROM 
+        trip_data.mar_23
+    GROUP BY
+        month, member_casual
+    
+    UNION ALL
+    SELECT
+        EXTRACT(MONTH FROM started_at) AS month,
+        member_casual,
+        COUNT(ride_id) AS total_rides,
+        AVG(TIMESTAMP_DIFF(ended_at, started_at, minute)) AS avg_ride_length_min
+    FROM 
+        trip_data.apr_23
+    GROUP BY
+        month, member_casual
+
+    UNION ALL
+    SELECT
+        EXTRACT(MONTH FROM started_at) AS month,
+        member_casual,
+        COUNT(ride_id) AS total_rides,
+        AVG(TIMESTAMP_DIFF(ended_at, started_at, minute)) AS avg_ride_length_min
+    FROM 
+        trip_data.may_23
+    GROUP BY
+        month, member_casual
+
+    UNION ALL
+    SELECT
+        EXTRACT(MONTH FROM started_at) AS month,
+        member_casual,
+        COUNT(ride_id) AS total_rides,
+        AVG(TIMESTAMP_DIFF(ended_at, started_at, minute)) AS avg_ride_length_min
+    FROM 
+        trip_data.jun_23
+    GROUP BY
+        month, member_casual
+
+    UNION ALL
+    SELECT
+        EXTRACT(MONTH FROM started_at) AS month,
+        member_casual,
+        COUNT(ride_id) AS total_rides,
+        AVG(TIMESTAMP_DIFF(ended_at, started_at, minute)) AS avg_ride_length_min
+    FROM 
+        trip_data.jul_23
+    GROUP BY
+        month, member_casual
+
+    UNION ALL
+    SELECT
+        EXTRACT(MONTH FROM started_at) AS month,
+        member_casual,
+        COUNT(ride_id) AS total_rides,
+        AVG(TIMESTAMP_DIFF(ended_at, started_at, minute)) AS avg_ride_length_min
+    FROM 
+        trip_data.aug_23
+    GROUP BY
+        month, member_casual
+
+    UNION ALL
+    SELECT
+        EXTRACT(MONTH FROM started_at) AS month,
+        member_casual,
+        COUNT(ride_id) AS total_rides,
+        AVG(TIMESTAMP_DIFF(ended_at, started_at, minute)) AS avg_ride_length_min
+    FROM 
+        trip_data.sep_23
+    GROUP BY
+        month, member_casual
+
+    UNION ALL
+    SELECT
+        EXTRACT(MONTH FROM started_at) AS month,
+        member_casual,
+        COUNT(ride_id) AS total_rides,
+        AVG(TIMESTAMP_DIFF(ended_at, started_at, minute)) AS avg_ride_length_min
+    FROM 
+        trip_data.oct_23
+    GROUP BY
+        month, member_casual
+
+    UNION ALL
+    SELECT
+        EXTRACT(MONTH FROM started_at) AS month,
+        member_casual,
+        COUNT(ride_id) AS total_rides,
+        AVG(TIMESTAMP_DIFF(ended_at, started_at, minute)) AS avg_ride_length_min
+    FROM 
+        trip_data.nov_23
+    GROUP BY
+        month, member_casual
+
+    UNION ALL
+    SELECT
+        EXTRACT(MONTH FROM started_at) AS month,
+        member_casual,
+        COUNT(ride_id) AS total_rides,
+        AVG(TIMESTAMP_DIFF(ended_at, started_at, minute)) AS avg_ride_length_min
+    FROM 
+        trip_data.dec_23
+    GROUP BY
+        month, member_casual
+)
+
+SELECT
+    month,
+    member_casual,
+    SUM(total_rides) AS total_rides,
+    AVG(avg_ride_length_min) AS avg_ride_length_min
+FROM
+    MonthlyRideCounts
+GROUP BY
+    month, member_casual
+ORDER BY
+    month, member_casual;
