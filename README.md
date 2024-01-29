@@ -29,3 +29,24 @@ Moreno set a clear goal: Design marketing strategies aimed at turning occasional
 All trip data can be found on <https://divvy-tripdata.s3.amazonaws.com/index.html>.
 
 Data has been provided by **Motivate International Inc** under this license <https://www.divvybikes.com/data-license-agreement>
+
+## First steps
+
+## Prepare the data
+
+## Process the data
+
+## Analyze the data
+
+There was a total of **5'719,877 rides** on 2023, where 64% of them were made by members, leaving only a 36% of casual users.
+
+![image](https://github.com/EmilioCG30/cyclistic-analysis/assets/111447739/52b51ee6-0bf8-4627-b0f2-73f5a237031e)
+
+The average ride duration was of 18min throughout the year 2023.
+
+## Sharing the Analysis
+### Creating Data Viz
+
+
+
+You can view the entire dashboard here <https://popsql.com/dashboards/R1U5GmL6/cyclistic?access_token=38d1bdf4080079808bd6fb5e16f3d279>
