@@ -28,18 +28,31 @@ Moreno set a clear goal: Design marketing strategies aimed at turning occasional
 
 Trip data includes the following columns:
 * ride_id: **String**
+  - Refers to a single trip made, it can´t be the same ID twice.
 * rideable_type: **String**
+  - Referes to wether the bycicle with which each trip was made is electric. classic or docked bike.
 * started_at: **TimeStamp**
+  - Includes year, month, day, hour, minute and second each ride was started
 * ended_at: **TimeStamp**
+  - Includes year, month, day, hour, minute and second each ride was finished
 * start_station_name: **String**
+  - Includes the station name each trip started. Tipically the intersection of two streets.
 * start_station_id: **String**
+  - Refers to the unique ID entitled to each station.
 * end_station_name: **String**
+  - Includes the station name each trip finished. Tipically the intersection of two streets.
 * end_station_id: **String**
+  - Refers to the unique ID entitled to each station.
 * start_lat: **Float**
+  - Refers to the latitude at which each trip started.
 * start_lng: **Float**
+  - - Refers to the longitude at which each trip started.
 * end_lat: **Float**
+  - Refers to the latitude at which each trip ended.
 * end_lng: **Float**
+  - Refers to the longitude at which each trip ended.
 * member_casual: **String**
+  - Tells if the ride was made by a member or a casual user.
 
 For this **Practical Case Analysis** we will be centering our attention in started_at, ended_at and member_casual columns as it gives us access to ride duration, day of the week, month, if the user is a member or casual rider and total trips, giving us access to powerful insights for this specific scenario.
 
