@@ -1,0 +1,38 @@
+-- Prepare the data by creating a single table with the information of every month of 2023.
+
+CREATE TABLE trip_data.year_23 AS
+SELECT *
+FROM trip_data.jan_23
+UNION ALL
+SELECT *
+FROM trip_data.feb_23
+UNION ALL
+SELECT *
+FROM trip_data.mar_23
+UNION ALL
+SELECT *
+FROM trip_data.apr_23
+UNION ALL
+SELECT *
+FROM trip_data.may_23
+UNION ALL
+SELECT *
+FROM trip_data.jun_23
+UNION ALL
+SELECT *
+FROM trip_data.jul_23
+UNION ALL
+SELECT *
+FROM trip_data.aug_23
+UNION ALL
+SELECT *
+FROM trip_data.sep_23
+UNION ALL
+SELECT *
+FROM trip_data.oct_23
+UNION ALL
+SELECT *
+FROM trip_data.nov_23
+UNION ALL
+SELECT *
+FROM trip_data.dec_23
