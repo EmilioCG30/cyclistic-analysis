@@ -1,0 +1,15 @@
+-- Obtain the mean ride length per day of the week and total trip count per day of the week
+SELECT
+    EXTRACT(
+        DAYOFWEEK
+        FROM
+            started_at
+    ) AS days_of_week,
+    COUNT(ride_id) AS total_rides,
+    AVG(TIMESTAMP_DIFF(ended_at, started_at, minute)) AS avg_ride_length_min
+FROM 
+    trip_data.year_23
+GROUP BY
+    days_of_week
+ORDER BY
+    days_of_week;
