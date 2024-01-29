@@ -129,6 +129,18 @@ However, the ride duration is higher on weekends (Saturday and Sunday), averagin
 
 You can view the entire dashboard [here](https://popsql.com/dashboards/R1U5GmL6/cyclistic?access_token=38d1bdf4080079808bd6fb5e16f3d279) which contains all the vizualizations seen here and a few others like member vs casual users use over a month and day of the week. You will be able to see the data being presented in chart mode and much more!
 
+Dashboard includes:
+
+* Total Rides in 2023
+* Total Rides per Membership in 2023
+* Average Ride Duration in 2023
+* Total Rides per Month in 2023
+* Total Rides per Month per Membership
+* Mean Ride Length per Month in 2023 (min)
+* Total Rides per Day of the Week in 2023
+* Total Rides per Day of the Week per Membership in 2023
+* Mean Ride Length per Day of the Week in 2023 (min)
+* Mean ride length per membership (min) in 2023
 
 ## Sharing the Analysis
 
