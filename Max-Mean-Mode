@@ -1,0 +1,16 @@
+-- Get the total ride numbers, mean and max ride length and the week mode (moda)
+SELECT
+    COUNT(ride_id) AS total_rides,
+    AVG(TIMESTAMP_DIFF(ended_at, started_at, minute)) AS avg_ride_length_min,
+    MAX(TIMESTAMP_DIFF(ended_at, started_at, minute)) AS max_ride_length_min,
+    MIN(TIMESTAMP_DIFF(ended_at, started_at, minute)) AS min_ride_length_min,
+    APPROX_TOP_COUNT(
+        EXTRACT(
+            DAYOFWEEK
+            FROM
+                started_at
+        ),
+        1
+    ) AS mode
+FROM
+    trip_data.year_23;
