@@ -1,0 +1,31 @@
+-- Select for reviweing data in a single month
+SELECT 
+    COUNT(member_casual) AS casual
+FROM
+    trip_data.jan_23
+WHERE
+    member_casual = 'casual';
+
+-- Select with a count function for counting the records in a single month
+SELECT
+    COUNT(ride_id)
+FROM 
+    trip_data.jan_23;
+
+-- Select for distinct days of the week
+SELECT
+    DISTINCT(EXTRACT(
+        DAYOFWEEK
+        FROM
+            started_at
+    )) AS days_of_week
+FROM
+    trip_data.year_23
+ORDER BY
+    days_of_week;
+
+-- TOTAL DATA
+SELECT
+    COUNT(ride_id)
+FROM 
+    trip_data.year_23
