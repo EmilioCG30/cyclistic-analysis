@@ -71,7 +71,7 @@ Data has been provided by **Motivate International Inc** under [this license](ht
 
 - No, this data is automatically recorded by the stations and all existing stations are included. They are provided directly by the company.
 
-**5. How are you addressing authorization, privacy, security and accessibility? **
+**5. How are you addressing authorization, privacy, security and accessibility?**
 
 - Data is protected by Google encryption, the data can only be accessed through the configured Google account. The authorization of the data is under [this license](https://www.divvybikes.com/data-license-agreement).
 
@@ -94,7 +94,6 @@ Data has been provided by **Motivate International Inc** under [this license](ht
 See [Prepare SQL Sentence](/Prepare-Data) for more details on how to do this.
 
 2. Add two columns to the table in order to obtain the ride length and day of the week.
-
 
 ## Process the data
 
