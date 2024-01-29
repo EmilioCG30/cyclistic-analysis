@@ -1,0 +1,19 @@
+-- Obtain the mean ride length, number of rides per membership type per day of the week
+SELECT 
+    EXTRACT(
+        DAYOFWEEK
+        FROM
+            started_at
+    ) AS days_of_week,
+    member_casual,
+    COUNT(ride_id) AS total_rides,
+    AVG(CASE WHEN member_casual = 'casual' THEN TIMESTAMP_DIFF(ended_at, started_at, minute) END) AS avg_ride_length_casual_min,
+    AVG(CASE WHEN member_casual = 'member' THEN TIMESTAMP_DIFF(ended_at, started_at, minute) END) AS avg_ride_length_member_min
+FROM 
+    trip_data.year_23
+WHERE  
+    member_casual IN ('casual', 'member')
+GROUP BY 
+    member_casual, days_of_week
+ORDER BY
+    days_of_week;
