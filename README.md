@@ -26,19 +26,29 @@ Moreno set a clear goal: Design marketing strategies aimed at turning occasional
 
 ## Data
 
-All trip data can be found on <https://divvy-tripdata.s3.amazonaws.com/index.html>.
+All trip data can be found [here](https://divvy-tripdata.s3.amazonaws.com/index.html).
 
-Data has been provided by **Motivate International Inc** under this license <https://www.divvybikes.com/data-license-agreement>
+Data has been provided by **Motivate International Inc** under [this license](https://www.divvybikes.com/data-license-agreement).
 
 ## First steps
 
+**1. What is the problem you are trying to solve?**
+
+- Increase the number of members with membership. Turn those casual users into members.
+
+**2. How can your knowledge drive business decisions?**
+
+- To be able to determine the best way to do this considering the available data.
+
 ## Prepare the data
+
+For the preparation process first of all it is essential
 
 ## Process the data
 
 ## Analyze the data
 
-You can view the entire dashboard here <https://popsql.com/dashboards/R1U5GmL6/cyclistic?access_token=38d1bdf4080079808bd6fb5e16f3d279>
+You can view the entire dashboard [here](https://popsql.com/dashboards/R1U5GmL6/cyclistic?access_token=38d1bdf4080079808bd6fb5e16f3d279).
 
 ### 2023 as a Year
 
@@ -68,5 +78,4 @@ However, the ride duration is higher on weekends (Saturday and Sunday), averagin
 
 
 ## Sharing the Analysis
-### Creating Data Viz
 
