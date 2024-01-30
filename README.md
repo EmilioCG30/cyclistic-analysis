@@ -109,14 +109,14 @@ See [Prepare SQL Sentence](/Prepare-Data) for more details on how to do this.
 ## Process the data
 
 1. Create a new column called "ride_length". This will be calculated per day of the week, per month, per year and per membership type.
-- The sentence to do this with SQL will be:
+- The query to do this with SQL will be:
 ```
  AVG(TIMESTAMP_DIFF(ended_at, started_at, minute)) AS avg_ride_length_min
 ```
 Where the TIMESTAMP_DIFF function is used in order to determine each ride_id duration (end time minus start time) and then the AVG (average) function is used to determine the average duration of the rides in terms of "minutes".
 
 2. Create a new column called "day_of_week".
-- The sentence to do this in SQL will be:
+- The query to do this in SQL will be:
 ```
  EXTRACT(
         DAYOFWEEK
@@ -128,11 +128,28 @@ Where the EXTRACT function alongside the DAYOFWEEK function will help determine 
 > [!NOTE]
 > Be noted that days_of_week will be shown as integers from 1 through 7, where 1 is Sunday and 7 is Saturday
 
-3. Create a new column called "total_rides". This column will get the total rides per day of the week, per month, per year and per membership type.
+5. Create a new column for getting the mode of day_of_week. This will tell us the day in which most rides were made.
+  - The query to do this in SQL will be:
+```
+ APPROX_TOP_COUNT(
+        EXTRACT(
+            DAYOFWEEK
+            FROM
+                started_at
+        ),
+        1
+    ) AS mode
+```
+The APPROX_TOP_COUNT function will help determine the day of the week that repeats the most throughout the year. In this case, it was Saturday with 883,566 rides in 2023.
+
+4. Create a new column called "total_rides". This column will get the total rides per day of the week, per month, per year and per membership type.
 
 > [!IMPORTANT]
 > All of this columns will be run on 4 differente SQL files in order to obtain the different data according to the timeframe we are inspecting.
-> You can find all of this files [here](/).
+
+> In [this code](/Max-Mean-Mode) you can find an example for gathering this data from the table year_23, which reunites data from all 12 months.
+
+> You can find all examples for year, month, day and membership type [here](/).
 
 ## Analyze the data
 
