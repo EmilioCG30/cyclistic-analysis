@@ -102,7 +102,7 @@ Data has been provided by **Motivate International Inc** under [this license](ht
 
 ## Prepare the data
 
-1. For the preparation process first of all it is essential to create a new table in order to unite all tables from each month of 2023.
+1. For the preparation process first of all it is essential to create a new table in order to unite all tables from each month of 2023. This will help us organize our data and create better and cleaner queries where the data from all 12 months are incorporated.
 
 See [Prepare SQL Sentence](/Prepare-Data) for more details on how to do this.
 
@@ -128,7 +128,7 @@ Where the EXTRACT function alongside the DAYOFWEEK function will help determine 
 > [!NOTE]
 > Be noted that days_of_week will be shown as integers from 1 through 7, where 1 is Sunday and 7 is Saturday
 
-5. Create a new column for getting the mode of day_of_week. This will tell us the day in which most rides were made.
+3. Create a new column for getting the mode of day_of_week. This will tell us the day in which most rides were made.
   - The query to do this in SQL will be:
 ```
  APPROX_TOP_COUNT(
