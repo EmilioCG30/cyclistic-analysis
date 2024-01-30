@@ -28,7 +28,7 @@ Moreno set a clear goal: Design marketing strategies aimed at turning occasional
 
 Trip data includes the following columns:
 * ride_id: **String**
-  - Refers to a single trip made, it can´t be the same ID twice.
+  - Each ride_id corresponds to a unique trip and cannot be repeated.
 * rideable_type: **String**
   - Referes to wether the bycicle with which each trip was made is electric. classic or docked bike.
 * started_at: **TimeStamp**
@@ -106,11 +106,51 @@ Data has been provided by **Motivate International Inc** under [this license](ht
 
 See [Prepare SQL Sentence](/Prepare-Data) for more details on how to do this.
 
-2. Add two columns to the table in order to obtain the ride length and day of the week.
-
 ## Process the data
 
+1. Create a new column called "ride_length". This will be calculated per day of the week, per month, per year and per membership type.
+- The sentence to do this with SQL will be:
+```
+ AVG(TIMESTAMP_DIFF(ended_at, started_at, minute)) AS avg_ride_length_min
+```
+Where the TIMESTAMP_DIFF function is used in order to determine each ride_id duration (end time minus start time) and then the AVG (average) function is used to determine the average duration of the rides in terms of "minutes".
+
+2. Create a new column called "day_of_week".
+- The sentence to do this in SQL will be:
+```
+ EXTRACT(
+        DAYOFWEEK
+        FROM
+            started_at
+    ) AS days_of_week
+```
+Where the EXTRACT function alongside the DAYOFWEEK function will help determine the day of the week from the started_at column. 
+> [!NOTE]
+> Be noted that days_of_week will be shown as integers from 1 through 7, where 1 is Sunday and 7 is Saturday
+
+3. Create a new column called "total_rides". This column will get the total rides per day of the week, per month, per year and per membership type.
+
+> [!IMPORTANT]
+> All of this columns will be run on 4 differente SQL files in order to obtain the different data according to the timeframe we are inspecting.
+> You can find all of this files [here](/).
+
 ## Analyze the data
+
+**1. How should you organize your data to perform an analysis?**
+
+- Per month and per year. In case of days of the week in ascending order (1-7)
+
+**2. Is your data in the correct format?**
+
+- Yes
+
+**3. What surprises did you discover in the data?**
+
+- That the colder months have fewer trips than the warmer months. Weekends are the days with the most trips and the longest duration, on average 19 minutes. While during the week it is 15mins. Mondays in the same way tend to have the longest duration of trips but very little.
+
+**4. How will this knowledge help you to answer your business questions?**
+
+- Especially taking into account the travel time and the amount we can give ourselves a very good idea and attack that specific market for costs.
 
 ### 2023 as a Year
 
